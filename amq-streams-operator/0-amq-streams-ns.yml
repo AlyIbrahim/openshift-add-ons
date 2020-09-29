@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: amq-streams
+  annotaions:
+    openshift.io/display-name: "AMQ Streams"
+spec:
