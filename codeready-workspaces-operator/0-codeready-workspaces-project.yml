@@ -1,0 +1,15 @@
+kind: Project
+apiVersion: project.openshift.io/v1
+metadata:
+  name: openshift-workspaces
+  labels:
+    olm.operatorgroup.uid/709337f9-1a94-4ae4-8c15-f1b112250dfe: ''
+    openshift.io/cluster-monitoring: 'true'
+  annotations:
+    openshift.io/display-name: 'CodeReady Workspaces'
+    openshift.io/sa.scc.mcs: 's0:c24,c14'
+    openshift.io/sa.scc.supplemental-groups: 1000580000/10000
+    openshift.io/sa.scc.uid-range: 1000580000/10000
+spec:
+  finalizers:
+    - kubernetes
