@@ -1,7 +1,7 @@
 kind: Project
 apiVersion: project.openshift.io/v1
 metadata:
-  name: openshift-workspaces
+  name: amq-streams 
   labels:
     openshift.io/cluster-monitoring: 'true'
   annotations:
