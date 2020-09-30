@@ -3,5 +3,5 @@ kind: Namespace
 metadata:
   name: amq-streams
   annotaions:
-    openshift.io/display-name: "AMQ Streams"
+    openshift.io/display-name: 'AMQ Streams'
 spec:
