@@ -3,6 +3,8 @@ kind: OperatorGroup
 metadata:
   name: amq-group
   namespace: amq-streams
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
 spec:
   targetNamespaces:
   - amq-streams
