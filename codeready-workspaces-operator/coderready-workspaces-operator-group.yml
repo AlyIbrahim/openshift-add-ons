@@ -3,8 +3,6 @@ kind: OperatorGroup
 metadata:
   name: codeready-group
   namespace: openshift-workspaces
-  annotations:
-    argocd.argoproj.io/sync-wave: "-1"
 spec:
   targetNamespaces:
   - openshift-workspaces

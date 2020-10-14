@@ -1,14 +1,15 @@
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
-  name: codeready-workspaces
-  namespace: openshift-workspaces
+  name: jenkins-operator
+  namespace: jenkins
   annotations:
     argocd.argoproj.io/sync-wave: "0"
+
 spec:
-  channel: latest
+  channel: alpha
   installPlanApproval: Automatic
-  name: codeready-workspaces
-  source: redhat-operators
+  name: jenkins-operator
+  source: community-operators
   sourceNamespace: openshift-marketplace
-  #  startingCSV: crwoperator.v2.3.0
+  # startingCSV: jenkins-operator.v0.4.1-rc3

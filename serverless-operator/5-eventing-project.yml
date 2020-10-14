@@ -1,15 +1,15 @@
 kind: Project
 apiVersion: project.openshift.io/v1
 metadata:
-  name: openshift-workspaces
+  name: knative-eventing
   labels:
     openshift.io/cluster-monitoring: 'true'
   annotations:
-    openshift.io/display-name: 'CodeReady Workspaces'
+    openshift.io/display-name: 'Knative Eventing'
     openshift.io/sa.scc.mcs: 's0:c24,c14'
     openshift.io/sa.scc.supplemental-groups: 1000580000/10000
     openshift.io/sa.scc.uid-range: 1000580000/10000
-    argocd.argoproj.io/sync-wave: "-2"
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   finalizers:
     - kubernetes

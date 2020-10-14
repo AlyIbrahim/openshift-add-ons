@@ -1,11 +1,11 @@
 kind: Project
 apiVersion: project.openshift.io/v1
 metadata:
-  name: openshift-workspaces
+  name: open-cluster-management
   labels:
     openshift.io/cluster-monitoring: 'true'
   annotations:
-    openshift.io/display-name: 'CodeReady Workspaces'
+    openshift.io/display-name: 'Advanced Cluster Management'
     openshift.io/sa.scc.mcs: 's0:c24,c14'
     openshift.io/sa.scc.supplemental-groups: 1000580000/10000
     openshift.io/sa.scc.uid-range: 1000580000/10000

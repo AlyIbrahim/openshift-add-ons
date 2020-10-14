@@ -1,10 +1,10 @@
 apiVersion: operators.coreos.com/v1
 kind: OperatorGroup
 metadata:
-  name: codeready-group
-  namespace: openshift-workspaces
+  name: jenkins-group
+  namespace: jenkins
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
 spec:
   targetNamespaces:
-  - openshift-workspaces
+  - jenkins
