@@ -6,7 +6,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "0"
 spec:
-  channel: release-2.0
+  channel: release-2.1
   installPlanApproval: Automatic
   name: advanced-cluster-management
   source: redhat-operators
