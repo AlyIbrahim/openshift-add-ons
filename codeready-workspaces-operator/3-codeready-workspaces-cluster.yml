@@ -10,32 +10,28 @@ metadata:
     - oauthclients.finalizers.che.eclipse.org
 spec:
   auth:
+    identityProviderURL: ''
+    identityProviderRealm: ''
+    identityProviderImage: ''
+    identityProviderClientId: ''
     externalIdentityProvider: false
-    identityProviderClientId: codeready-public
-    identityProviderPostgresSecret: che-identity-postgres-secret
-    identityProviderRealm: codeready
-    identityProviderSecret: che-identity-secret
     openShiftoAuth: true
-    updateAdminPassword: false
   database:
-    chePostgresDb: dbche
-    chePostgresHostName: postgres
-    chePostgresPort: '5432'
-    chePostgresSecret: che-postgres-secret
+    chePostgresUser: ''
     externalDb: false
-  k8s: {}
+    chePostgresHostName: ''
+    chePostgresPassword: ''
+    chePostgresDb: ''
+    chePostgresPort: ''
   metrics:
     enable: true
   server:
-    cheLogLevel: INFO
-    externalDevfileRegistry: false
+    pluginRegistryImage: ''
     selfSignedCert: false
-    cheDebug: 'false'
+    devfileRegistryImage: ''
     tlsSupport: true
-    allowUserDefinedWorkspaceNamespaces: false
-    externalPluginRegistry: false
-    gitSelfSignedCert: false
     cheFlavor: codeready
+    cheImageTag: ''
     #    customCheProperties:
 #      CHE_LIMITS_WORKSPACE_IDLE_TIMEOUT: "28800"
   storage:
