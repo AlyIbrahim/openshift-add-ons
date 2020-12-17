@@ -1,0 +1,17 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  annotations:
+  name: amq-broker-management
+  namespace: amq-broker
+  labels:
+    ActiveMQArtemis: camel-queue
+    application: camel-queue-app
+spec:
+  to:
+    kind: Service
+    name: camel-queue-hdls-svc
+    weight: 100
+  port:
+    targetPort: console-jolokia
+  wildcardPolicy: None
