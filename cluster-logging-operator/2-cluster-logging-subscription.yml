@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: cluster-logging
+  namespace: openshift-logging
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+  labels:
+    operators.coreos.com/cluster-logging.openshift-logging: ''
+spec:
+  channel: '4.6'
+  installPlanApproval: Automatic
+  name: cluster-logging
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+#  startingCSV: clusterlogging.4.6.0-202011221454.p0
