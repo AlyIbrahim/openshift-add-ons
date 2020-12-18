@@ -1,0 +1,14 @@
+kind: Project
+apiVersion: project.openshift.io/v1
+metadata:
+  name: openshift-operators-redhat
+  labels:
+    openshift.io/cluster-monitoring: 'true'
+  annotations:
+    openshift.io/sa.scc.mcs: 's0:c24,c14'
+    openshift.io/sa.scc.supplemental-groups: 1000580000/10000
+    openshift.io/sa.scc.uid-range: 1000580000/10000
+    argocd.argoproj.io/sync-wave: "-2"
+spec:
+  finalizers:
+    - kubernetes
