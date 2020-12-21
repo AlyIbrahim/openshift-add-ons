@@ -45,6 +45,10 @@ Or you can go ahead and depoy it using the files in argocd-operator  directory:
 
 `oc apply -f argocd-operator/2-argocd-subscription.yml`
 
+Switch to argocd project where we will create all our argo artifacts:
+
+`oc project argocd`
+
 Once the operator is installed go ahead and create ArgoCD instance:
 
 `oc apply -f argocd-operator/4-argocd-basic-instance.yml`
