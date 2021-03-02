@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  annotations:
+    maintainer: 'Aly Ibrahim <aly@redhat.com>'
+    repo-url: 'https://github.com/AlyIbrahim/openshift-add-ons.git'
+  name: cluster-setup
+  namespace: argocd
+spec:
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  destinations:
+    - namespace: '*'
+      server: '*'
+  sourceRepos:
+    - '*'

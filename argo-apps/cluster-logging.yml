@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  annotations:
+    maintainer: 'Aly Ibrahim <aly@redhat.com>'
+    repo-url: 'http://github.com/AlyIbrahim/openshift-add-ons.git'
+  name: cluster-logging
+  namespace: argocd
+spec:
+  destination:
+    namespace: cluster-logging
+    server: 'https://kubernetes.default.svc'
+  project: cluster-setup
+  source:
+    path: cluster-logging-operator
+    repoURL: 'https://github.com/AlyIbrahim/openshift-add-ons.git'
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true 

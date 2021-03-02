@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  annotations:
+    maintainer: 'Aly Ibrahim <aly@redhat.com>'
+    repo-url: 'http://github.com/AlyIbrahim/openshift-add-ons.git'
+  name: jenkins
+  namespace: argocd
+spec:
+  destination:
+    namespace: jenkins
+    server: 'https://kubernetes.default.svc'
+  project: cluster-setup
+  source:
+    path: jenkins-operator
+    repoURL: 'https://github.com/AlyIbrahim/openshift-add-ons.git'
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true

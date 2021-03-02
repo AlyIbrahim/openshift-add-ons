@@ -23,7 +23,7 @@ The solution is currently based on ArgoCD, we may extend this to other tools in 
    
    Or apply the file admins-group.yml:
    
-   `oc apply -f config/admin-group.yml`
+   `oc apply -f config/admins-group.yml`
    
 2- Assign cluster-admin role to the newly created group and ArgoCD Service Account:
 
