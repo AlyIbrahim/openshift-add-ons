@@ -10,19 +10,19 @@ metadata:
     - oauthclients.finalizers.che.eclipse.org
 spec:
   auth:
-    identityProviderURL: ''
-    identityProviderRealm: ''
-    identityProviderImage: ''
-    identityProviderClientId: ''
-    externalIdentityProvider: false
+    #    identityProviderURL: ''
+    #    identityProviderRealm: ''
+    #    identityProviderImage: ''
+    #    identityProviderClientId: ''
+    #    externalIdentityProvider: false
     openShiftoAuth: true
   database:
-    chePostgresUser: ''
+    #    chePostgresUser: ''
     externalDb: false
-    chePostgresHostName: ''
-    chePostgresPassword: ''
-    chePostgresDb: ''
-    chePostgresPort: ''
+      #    chePostgresHostName: ''
+      #    chePostgresPassword: ''
+      #    chePostgresDb: ''
+      #    chePostgresPort: ''
   metrics:
     enable: true
   server:
