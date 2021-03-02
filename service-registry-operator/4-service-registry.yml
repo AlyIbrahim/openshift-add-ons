@@ -1,0 +1,12 @@
+apiVersion: apicur.io/v1alpha1
+kind: ApicurioRegistry
+metadata:
+  name: demo-registry
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+spec:
+  configuration:
+    persistence: "streams"
+    streams:
+      bootstrapServers: "cluster-kafka-bootstrap.amq-streams.svc:9092"

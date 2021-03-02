@@ -32,8 +32,8 @@ spec:
     tlsSupport: true
     cheFlavor: codeready
     cheImageTag: ''
-    #    customCheProperties:
-#      CHE_LIMITS_WORKSPACE_IDLE_TIMEOUT: "28800"
+    customCheProperties:
+      CHE_LIMITS_WORKSPACE_IDLE_TIMEOUT: "28800"
   storage:
     preCreateSubPaths: true
     pvcClaimSize: 1Gi
