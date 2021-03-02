@@ -11,8 +11,10 @@ metadata:
   name: argocd
   namespace: argocd
 spec:
+  version: v1.8.2
   dex:
     openShiftOAuth: true
+    version: v2.27.0
   rbac:
     defaultPolicy: ''
     policy: |
