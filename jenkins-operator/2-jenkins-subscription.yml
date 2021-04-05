@@ -9,7 +9,7 @@ metadata:
 spec:
   channel: alpha
   installPlanApproval: Automatic
-  name: jenkins-operator
-  source: community-operators
+  name: openshift-jenkins-operator
+  source: redhat-operators
   sourceNamespace: openshift-marketplace
   # startingCSV: jenkins-operator.v0.4.1-rc3
