@@ -13,6 +13,7 @@ metadata:
 spec:
   version: v1.8.2
   dex:
+    image: ghcr.io/dexidp/dex
     openShiftOAuth: true
     version: v2.27.0
   rbac:
