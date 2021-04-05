@@ -4,6 +4,7 @@ metadata:
   name: knative-eventing
   labels:
     openshift.io/cluster-monitoring: 'true'
+    argocd.argoproj.io/sync-options: Validate=false
   annotations:
     openshift.io/display-name: 'Knative Eventing'
 #    openshift.io/sa.scc.mcs: 's0:c24,c14'
