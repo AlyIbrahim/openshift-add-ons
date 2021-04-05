@@ -3,6 +3,7 @@ apiVersion: project.openshift.io/v1
 metadata:
   name: knative-serving
   labels:
+#    app.kubernetes.io/instance: serverless
     openshift.io/cluster-monitoring: 'true'
   annotations:
     openshift.io/display-name: 'Knative Serving'
