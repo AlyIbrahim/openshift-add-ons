@@ -3,6 +3,7 @@ apiVersion: project.openshift.io/v1
 metadata:
   name: openshift-logging 
   labels:
+    kubernetes.io/metadata.name: openshift-logging
     openshift.io/cluster-monitoring: 'true'
   annotations:
     openshift.io/display-name: 'Openshift Logging'

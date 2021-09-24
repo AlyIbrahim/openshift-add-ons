@@ -8,7 +8,7 @@ metadata:
   labels:
     operators.coreos.com/cluster-logging.openshift-logging: ''
 spec:
-  channel: '4.6'
+  channel: stable
   installPlanApproval: Automatic
   name: cluster-logging
   source: redhat-operators
