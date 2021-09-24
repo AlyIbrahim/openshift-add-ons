@@ -9,7 +9,7 @@ metadata:
   labels:
     operators.coreos.com/elasticsearch-operator.openshift-operators-redhat: ''
 spec:
-  channel: '4.6'
+  channel: stable
   installPlanApproval: Automatic
   name: elasticsearch-operator
   source: redhat-operators
