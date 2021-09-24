@@ -19,16 +19,18 @@ spec:
       transaction.state.log.min.isr: 2
       transaction.state.log.replication.factor: 3
     listeners:
-      plain:
-        authentiation:
-          type: scram-sha-512
-      tls:
-        authentiation:
-          type: tls
+      - name: plain
+        port: 9092
+        type: internal
+        tls: false
+      - name: tls
+        port: 9093
+        type: internal
+        tls: true
     replicas: 3
     storage:
       type: ephemeral
-    version: 2.5.0
+    version: 2.8.0
   zookeeper:
     replicas: 3
     storage:
