@@ -11,11 +11,23 @@ metadata:
   name: argocd
   namespace: argocd
 spec:
-  version: v1.8.2
+  #  version: v1.8.2
   dex:
-    image: ghcr.io/dexidp/dex
+    #    image: ghcr.io/dexidp/dex
     openShiftOAuth: true
-    version: v2.27.0
+      #    version: v2.27.0
+  grafana:
+    enabled: false
+    ingress:
+      enabled: false
+    route:
+      enabled: false
+  prometheus:
+    enabled: false
+    ingress:
+      enabled: false
+    route:
+      enabled: false
   rbac:
     defaultPolicy: ''
     policy: |
