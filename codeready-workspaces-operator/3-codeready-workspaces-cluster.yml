@@ -8,6 +8,10 @@ metadata:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
   finalizers:
     - oauthclients.finalizers.che.eclipse.org
+    - cheWorkspaces.clusterpermissions.finalizers.che.eclipse.org
+    - namespaces-editor.permissions.finalizers.che.eclipse.org
+    - devWorkspace.permissions.finalizers.che.eclipse.org
+    - consolelink.finalizers.che.eclipse.org
 spec:
   auth:
     #    identityProviderURL: ''
