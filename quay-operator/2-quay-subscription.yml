@@ -6,7 +6,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "0"
 spec:
-  channel: stable
+  channel: quay-v3.5
   installPlanApproval: Automatic
   name: quay-operator
   source: redhat-operators

@@ -1,5 +1,5 @@
-apiVersion: redhatcop.redhat.io/v1alpha1
-kind: QuayEcosystem
+apiVersion: quay.redhat.com/v1
+kind: QuayRegistry
 metadata:
   name: quayecosystem
   namespace: quay
@@ -7,16 +7,33 @@ metadata:
     argocd.argoproj.io/sync-wave: "1"
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true  
 spec:
-  clair:
-    enabled: true
-    imagePullSecretName: redhat-pull-secret
-  quay:
-    keepConfigDeployment: true
-    externalAccess:
-      hostname: quay.app.example.com
-    deploymentStrategy: Recreate
-    imagePullSecretName: redhat-pull-secret
-    skipSetup: false
+  components:
+    - managed: true
+      kind: clair
+    - managed: true
+      kind: postgres
+    - managed: true
+      kind: objectstorage
+    - managed: true
+      kind: redis
+    - managed: true
+      kind: horizontalpodautoscaler
+    - managed: true
+      kind: route
+    - managed: true
+      kind: mirror
+    - managed: true
+      kind: monitoring  
+        #  clair:
+        #    enabled: true
+#    imagePullSecretName: redhat-pull-secret
+#  quay:
+#    keepConfigDeployment: true
+#    externalAccess:
+#      hostname: quay.app.example.com
+#    deploymentStrategy: Recreate
+#    imagePullSecretName: redhat-pull-secret
+#    skipSetup: false
     #    registryStorage:
       #      persistentVolumeSize: 1Gi
       #      persistentVolumeStorageClassName: gp2
