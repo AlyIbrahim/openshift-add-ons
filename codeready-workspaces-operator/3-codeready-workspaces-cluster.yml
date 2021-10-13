@@ -38,6 +38,7 @@ spec:
     cheImageTag: ''
     customCheProperties:
       CHE_LIMITS_WORKSPACE_IDLE_TIMEOUT: "28800"
+      CHE_LIMITS_USER_WORKSPACES_COUNT: "10"
   storage:
     preCreateSubPaths: true
     pvcClaimSize: 1Gi
