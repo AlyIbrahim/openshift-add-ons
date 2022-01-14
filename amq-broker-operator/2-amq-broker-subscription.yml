@@ -8,9 +8,8 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "0"
 spec:
-  channel: current
+  channel: 7.x
   installPlanApproval: Automatic
-  name: amq-broker
+  name: amq-broker-rhel8
   source: redhat-operators
   sourceNamespace: openshift-marketplace
-#  startingCSV: amq-broker-operator.v0.17.0
